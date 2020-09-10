@@ -1,18 +1,16 @@
-$(document).ready(function(){
-    $('#button').click(function(){
-        if($('#remove').length)
-        {
-            return;
-        }
-        else
-        {
-            $('body').append("<p>Le $ est un bon élément monétaire. Le # de twitter est une bonne ID. Il faudra faire le point avec la classe pour cacher cet élément.</p>");
-            $('body').append('<button id="remove">Supprimer</button>')
+var a =$('#button');
+var test=false;
 
-            $('#remove').click(function(){
-                $('p').remove();
-                $('#remove').remove();
-            })
-        }
-    })
+a.click(function() 
+{	
+	var txt = $("<p id='button'></p>").text("le $ est un bon élément monétaire. Le # de twitter est une bonne I D. Il faudra faire le point avec la classe pour cacher cet élément."); 
+	var butt = $("<button id='reverse'></button>").text("appuyer pour le faire disparaitre."); 
+    $("body").append(txt,butt);
+    
+	var b=$('#reverse');
+	b.click(function()
+	{	console.log(b);
+		b.remove();
+		$('#texte').remove();
+	})
 })
